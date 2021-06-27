@@ -1,12 +1,17 @@
 import React from 'react'
-import { useMyHook } from 'use-random-number'
+import { useRandomNumber } from 'use-random-number';
 
-const App = () => {
-  const example = useMyHook()
+function Example() {
+  const [randomNum, getRandomNumber, initValue] = useRandomNumber();
+
   return (
     <div>
-      {example}
-    </div>
-  )
+    Random Number: {randomNum}
+    Initial Value: {initValue}
+    <button type="button" onClick={getRandomNumber}>
+      Random Number
+    </button>
+  </div>
+  );
 }
-export default App
+export default Example;

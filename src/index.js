@@ -10,7 +10,7 @@ function useRandomNumberGenerator() {
     setRandomNum(Math.floor(Math.random() * (max - min + 1) + min));
   };
 
-  // funtion to configure init
+  // funtion to configure 
   const initValue = () => {
     setRandomNum(1);
   };
