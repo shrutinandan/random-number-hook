@@ -13,16 +13,36 @@ npm install --save use-random-number
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+// import React, { Component } from 'react'
 
-import { useMyHook } from 'use-random-number'
+// import { useMyHook } from 'use-random-number'
 
-const Example = () => {
-  const example = useMyHook()
+// const Example = () => {
+//   const example = useMyHook()
+//   return (
+//     <div>{example}</div>
+//   )
+// }
+import React from "react";
+import { useRandomNumber } from "use-random-number";
+
+function Example() {
+  const [randomNum, getRandomNumber, initValue] = useRandomNumber();
+
   return (
-    <div>{example}</div>
-  )
+    <div>
+      Random Number: {randomNum}
+      <button type="button" onClick={getRandomNumber}>
+        Random Number
+      </button>
+      <button type="button" onClick={initValue}>
+        Initial Value: {initValue}
+      </button>
+    </div>
+  );
 }
+export default Example;
+
 ```
 
 ## License
